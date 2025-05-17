@@ -1,22 +1,20 @@
-package com.api.NomNomCounter.domain.user;
+package com.api.NomNomCounter.application.core.domain.user;
 
 import java.util.UUID;
 
 public class User {
-    private UUID id;
+    private Integer idUser;
     private String username;
     private String passwordUser;
 
     public User(){}
-
-    public User(UUID id, String username, String passwordUser){
-        this.id = id;
+    public User(String username, String passwordUser){
         this.username = username;
         this.passwordUser = passwordUser;
     }
 
-    public UUID getId() {
-        return id;
+    public Integer getIdUser() {
+        return idUser;
     }
 
     public String getUsername() {
@@ -27,7 +25,9 @@ public class User {
         this.username = username;
     }
 
-
+    public String getPasswordUser(){
+        return passwordUser;
+    }
     public void setPasswordUser(String passwordUser) {
         this.passwordUser = passwordUser;
     }

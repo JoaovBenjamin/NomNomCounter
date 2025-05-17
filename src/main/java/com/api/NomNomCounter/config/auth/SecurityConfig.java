@@ -1,4 +1,4 @@
-package com.api.NomNomCounter.config;
+package com.api.NomNomCounter.config.auth;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
