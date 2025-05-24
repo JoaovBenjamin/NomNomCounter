@@ -1,6 +1,8 @@
 package com.api.NomNomCounter.model;
-import java.util.UUID;
 
+import com.api.NomNomCounter.model.enums.MetaEnum;
+import com.api.NomNomCounter.model.enums.NivelDeAtividadeEnum;
+import com.api.NomNomCounter.model.enums.SexoEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,9 +18,10 @@ import lombok.NoArgsConstructor;
 @Entity
 public class UserEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idUser;
+    private Long idUser;
     private String bio;
-    @Column(unique = true)
     private String username;
     private String passwordUser;
+    @Enumerated(EnumType.STRING)
+    private SexoEnum sexo;
 }
